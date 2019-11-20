@@ -21,7 +21,7 @@ separate-uncertainty,  % Unsicherheiten seperat angeben (mit ±)
 % Gestaltung
 %\usepackage{microtype}  % Mikrotypographie (kann man am Ende verwenden)
 \usepackage{booktabs}  % schönere Tabellen
-\usepackage[toc]{multitoc}  % mehrspaltiges Inhaltsverzeichnis
+%\usepackage[toc]{multitoc}  % mehrspaltiges Inhaltsverzeichnis
 \usepackage{csquotes}  % Anführungszeichen mit \enquote
 \usepackage{caption}  % Anpassung der Bildunterschriften, Tabellenüberschriften
 \usepackage{subcaption}  % Unterabbildungen, Untertabellen, …
@@ -98,17 +98,17 @@ Nun muss man noch berücksichtigen, dass eine Überlagerung von nach rechts und 
 \begin{align}
 p(x)=\frac{1}{2}\,p_0 \, \cos(kx-\omega t -\alpha)
 \end{align}
-Umgeschrieben resultiert dann:
+Die Superposition von nach rechts und nach links laufender Welle lautet dann unter Ausnutzung der Rechenregeln für Sinus und Cosinus:
 \begin{align}
 p(x)=p_0 \, \cos(kx+\alpha)\, \cos(\omega t)
 \end{align}
-Durch Betrachtung der Randbedingungen $\frac{dp}{dx}\left(0\right)=0$ und $\frac{dp}{dx}\left(L\right)=0$ ergibt sich $\alpha=0$ und $k =\frac{n \pi}{L}$.
+Durch Betrachtung der Randbedingungen $\frac{dp}{dx}\left(0\right)=0$ und $\frac{dp}{dx}\left(L\right)=0$ ergeben sich $\alpha=0$ und $k =\frac{n \pi}{L}$.
 \newline
 \newline In der Quantenmechanik betrachten wir die zeitunabhängige Schrödinger-Gleichung:
 \begin{align}
 \label{sgl}E\Psi(\vec{r}) = -\frac{\hbar^2}{2m} \Delta \Psi(\vec{r}) + V(\vec{r})\Psi(\vec{r},t)
 \end{align}
-Für den eindimensionalen unendlich hohen Potentialtopf ist das Potential $V(x)$ definiert durch:
+Für den eindimensionalen unendlich hohen eindimensionalen Potentialtopf ist das Potential $V(x)$ definiert durch:
 \begin{align}
 V(x)=
   \begin{cases}
@@ -120,7 +120,7 @@ Damit reduziert sich (\ref{sgl}) innerhalb des Potentialtopfes zu:
 \begin{align}
 E\Psi(x) = -\frac{\hbar^2}{2m} \Delta \Psi(x)
 \end{align}
-Die Lösungen davon haben die Form:
+Die Lösungen dieser Gleichung haben aufgrund von Normierung dann die Form:
 \begin{align}
 \Psi(x)=\sqrt{\frac{2}{L}}\,\sin(kx+\alpha)
 \end{align}
@@ -133,7 +133,7 @@ Durch Multiplikation mit einem Phasenfaktor erhält man daraus die zeitabhängig
 \subsection{Analogon zum Wasserstoffatom}
 Für den zweiten Teilversuch wird ein Kugelresonator benötigt. Dieser besteht aus zwei Halbkugeln. In der oberen ist ein Mikrophon integriert und in der unteren ein Lautsprecher. Die beiden Hemisphären kann man gegeneinander verdrehen und dabei die Amplituden in Abhängigkeit vom Winkel messen.
 \newline
-\newline In der Quantenmechanik können wir als Ansatz für das Potential in der Schrödinger-Gleichung nun das Coulomb-Potential $-\frac{e^2}{r}$ verwenden, das es sich um ein Ein-Elektronen-System handelt. Zur Lösung muss man Kugelkoordinaten einführen und den Separationsansatz $\psi(r, \theta, \varphi) = Y^{m}_{l}(\theta, \varphi) \, R_{l}(r)$ betrachten. Daraus ergeben sich zwei Gleichungen:
+\newline In der Quantenmechanik können wir als Ansatz für das Potential in der Schrödinger-Gleichung nun das Coulomb-Potential $-\frac{e^2}{r}$ verwenden, da es sich um ein Ein-Elektronen-System handelt. Zur Lösung muss man Kugelkoordinaten einführen und den Separationsansatz $\psi(r, \theta, \varphi) = Y^{m}_{l}(\theta, \varphi) \, R_{l}(r)$ betrachten. Daraus ergeben sich zwei Gleichungen:
 \begin{align}
 \label{kugelfl}-\bigg \lbrack \frac{1}{\sin(\theta)} \frac{\partial}{\partial \theta} \bigg(\sin(\theta) \frac{\partial}{\partial \theta} \bigg) + \frac{1}{\sin^2(\theta)} \frac{\partial^2}{\partial \varphi^2} \bigg \rbrack Y^{m}_{l}(\theta, \varphi) &= l(l+1) Y^{m}_{l}(\theta, \varphi) \\
 -\frac{\hbar^2}{2mr} \frac{\partial^2}{\partial r^2} r R(r) - \frac{l(l+1)\hbar^2}{2mr^2} R(r)-\frac{e^2}{r} &= ER(r)
@@ -149,13 +149,64 @@ Dies wird nach Umformung in Kugelkoordinaten und mit dem Separationsansatz $p(r,
 \label{kugelfl}-\bigg \lbrack \frac{1}{\sin(\theta)} \frac{\partial}{\partial \theta} \bigg(\sin(\theta) \frac{\partial}{\partial \theta} \bigg) + \frac{1}{\sin^2(\theta)} \frac{\partial^2}{\partial \varphi^2} \bigg \rbrack Y^{m}_{l}(\theta, \varphi) &= l(l+1) Y^{m}_{l}(\theta, \varphi) \\
 -\frac{\partial^2f}{\partial r^2}-\frac{2}{r}\frac{\partial f}{\partial r}+\frac{l(l+1)}{r^2}\, f(r) &= \frac{\omega^2}{c^2}\, f(r)
 \end{align}
-Die erste Gleichung hat die gleiche Form wie Gleichung (\ref{kugelfl}) und haben somit dieselben Lösungen, die Kugelflächenfunktionen. Die Radialgleichung unterscheiden sich allerdings. Die Kugelflächenfunktionen können durch die assoziierten Legendre Polynome $P^{m}_{l}$ dargestellt werden:
+Die erste Gleichung hat die gleiche Form wie Gleichung (\ref{kugelfl}) und somit dieselben Lösungen, die Kugelflächenfunktionen. Die Radialgleichung unterscheiden sich allerdings. Die Kugelflächenfunktionen können durch die assoziierten Legendre Polynome $P^{m}_{l}$ dargestellt werden:
 \begin{align}
  Y^{m}_{l} 	\propto P^{m}_{l}(\cos(\theta))\, e^{im\varphi}
 \end{align}
-In diesem Versuch reicht es aufgrund der Zylindersymmetrie der vom Lautsprecher ausgesendeten Wellen aus den Fall $m = 0$ zu betrachten. $m$ ist hierbei die magnetische Quantenzahl.
+In diesem Versuchsteil ist es aufgrund der Zylindersymmetrie der vom Lautsprecher ausgesendeten Wellen bloß möglich den Fall $m = 0$ zu betrachten. $m$ ist hierbei die magnetische Quantenzahl ($-l \leq m \leq l$) und $l$ die Drehimpulsquantenzahl.
+\newline
+\newline Um die Symmetrie zu brechen und somit auch Werte $m \neq 0$ zu betrachten, muss man einen Abstandshalter zwischen beide Hemisphären bringen. Dies sorgt nämlich dafür, dass sich die Quantisierungsachse in einem Winkel von $45^{\circ}$ zur Symmetrieachse befindet. Da allerdings eine Entartung von positivem und zugehörigem negativen $m$ besteht, muss man eine Superposition zweier solcher Wellen betrachten und dies ergibt eine stehende Welle bezüglich des Azimutwinkels $\varphi$:
+\begin{align}
+e^{im\varphi} + e^{-im\varphi} = 2\cos(m\varphi)
+\end{align}
+%hier fehlt noch der vergleich
+
+
+
+\subsection{Modell eines Moleküls}
+Ein zweiatomiges Molekül kann durch zwei gekoppelte Kugelresonatoren modelliert werden. Hierbei ist $H^{+}_{2}$ das einfachste Beispiel, da man hier wieder bloß ein Elektron betrachten muss. Solche Moleküle sind zylindersymmetrisch bezüglich der Verbindungsachse durch die Kerne. Deshalb ist $m$ hier die geeignete Quantenzahl um das Modell zu beschreiben.  $l$ kann dafür nicht genutzt werden. Für einen großen Kernabstand (schwache Kopplung) beschreibt die Superposition der Atomorbitale die molekularen Zustände recht gut. Die zur Bezeichnung der Molekülorbitale verwendete Notation sieht wie folgt aus:
+\newline
+\newline
+\begin{tabular}{ccc}
+Quantenzahl (m) & Vorzeichen der Überlagerung & Ursprüngliche Atomzustände \\
+$\sigma (m=0)$ & $(+) \, \hat{=} \, \text{gerade} (g)$ & $1s$ \\
+$\pi (m=1) $ & $(-) \, \hat{=} \, \text{ungerade}(u)$ & $2s$\\
+$\delta (m=2)$ &  & $2p$ \\
+ &  &  $\vdots$ \\
+\end{tabular}
+\newline
+Als Beispiel kann man $\sigma_{u}[1s]$ betrachten. Dies ist also ein Molekül-Zustand, der aus zwei 1s-Orbitalen durch Überlagerung mit negativen Vorzeichen gebildet wurde und $m$ hat den Wert 0. Zustände mit einer hohen Aufenthaltswahrscheinlichkeit zwischen den Kernen bezeichnet man als bindend und Zustände mit Knoten zwischen den Kernen nennt man antibindend. Die Besetzung von antibindenden Zuständen schwächt die Bindung innerhalb des Moleküls. Meist ist der gerade Zustand der bindende.
+%hier fehlt noch der vergleich
+
+
+
+
+\subsection{Modellierung eines eindimensionalen Festkörpers}
+Ein eindimensionaler Festkörper kann durch die Aneinanderreihung von Zylindern wie beim Röhrenresonator und durch das Einbringen von Irisblenden simuliert werden. Ersteres stellt eine Kette von Atomen dar. Die Irisblenden als periodische Streuzentren führen zu der Öffnung von Bandlücken. Dies erzeugt Bereiche mit vielen und Bereiche mit wenigen Resonanzen. Bereiche ohne Resonanzen können als Bandlücken interpretiert werden. Die Öffnung der Bandlücken ist allerdings an die Erfüllung der Bragg-Bedingung (\ref{bragg}) geknüpft:
+\begin{align}
+\label{bragg} n\lambda=2a
+\end{align}
+Hierbei ist $a$ er Abstand der reflektierenden Ebenen und hier also gleichbedeutend mit dem Abstand der Streuzentren. In diesem Experiment wird die einfallende Welle reflektiert und somit wird das $k$ der Welle zu $-k$. Das $k$ erfüllt dabei die Bragg-Bedingung:
+\begin{align}
+\label{kn}k=n \, \frac{\pi}{a}
+\end{align}
+Der reziproke Gittervektor $\vec{G}$, der als $\vec{k'} - \vec{k}$ definiert ist, ergibt sich somit zu:
+\begin{align}
+G=n\,\frac{2\pi}{a} \, \text{mit} \, n \in Z
+\end{align}
+Der Abstand zweier diskreter k-Punkte in dem Röhrenresonator der Länge L ist nach (\ref{kn}) $\frac{\pi}{L}$) mit $L=i\cdot a$. Somit gibt es für $i$ Einheitszellen also $2i$ k-Punkte in einer Brillouin-Zone, die die Einheitszelle des reziproken Gitters ist. Nach dem Bloch-Theorem kann man die Wellenfunktion einer periodischen Struktur darstellen als: 
+\begin{align}
+\label{bloch} \Psi(x)=u_{k}(x)e^{ikx}
+\end{align}
+Wobei $u_k(x)$ die Periodizität des betrachteten Gitters besitzt. Dies kann dann umgeschrieben werden zu:
+\begin{align}
+\Psi(x)=\sum_{G} C_{k-G} e^{i(k-G)x}
+\end{align}
+Die Wellenfunktion ergibt sich also aus den Beiträgen aller $k$-Punkte in der Brillouin-Zone. $k$-Punkte sind durch reziproke Gittervektoren miteinander verbunden. Es reicht also aus die Dispersionsrelation $E(k)$ in der ersten Brillouin-Zone zu betrachten, dies wird dann als reduziertes Zonenschema bezeichnet.
+
 
 \section{Aufbau und Versuchsprinzip}
+
 
 
 
