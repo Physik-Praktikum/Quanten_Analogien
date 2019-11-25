@@ -209,6 +209,64 @@ Die Wellenfunktion ergibt sich also aus den Beiträgen aller $k$-Punkte in der B
 \section{Aufbau und Versuchsprinzip}
 
 
+\section{Auswertung}
+\subsection{Röhrenresonator}
+\subsubsection{Messung der Resonanzfrequenz und Bestimmung der Schallgeschwindigkeit}
+Während der Durchführung dieses Versuchsteils betrug die Raumtemperatur $T=20,6^{\circ} C$. Dies ermöglicht den theoretischen Wert für die Schallgeschwindigkeit zu berechnen. Dazu wird im Folgenden die Gleichung für die Schallgeschwindigkeit eines idealen Gasas verwendet:
+\begin{align}
+c_{Schall}^{theoretisch} = \sqrt{\kappa \, \frac{R\, T}{M}}
+\end{align}
+Dabei ist $R$ die universelle Gaskonstante, $\kappa$ der Adiabatenexponent und M die Molare Masse des betrachteten Gases. R hat den Wert $8,314 \frac{kg \, m^2}{s^2 \, mol \, K}$.
+Für $\kappa$ und M werden die Werte für trockene Luft bei $20^{\circ}C$ verwendet. Somit ist $\kappa=1,40$ und $M=28,949 \frac{g}{mol}$. Der daraus resultierende theoretische Wert für die Schallgeschwindigkeit ist:
+\begin{align}
+c_{Schall}^{theoretisch}=343,67 \, \frac{m}{s}
+\end{align}
+Da die Temperatur gemessen wurde, ist diese als mit einer Messabweichung behaftet anzunehmen. Die angenommene Messunsicherheit ist $\Delta T=0,1^{\circ}C$. Dies bewirkt eine Unsicherheit $\Delta c_{Schall}^{theoretisch}$:
+\begin{align}
+\Delta c_{Schall}^{theoretisch} = \left| \frac{\partial c_{Schall}^{theoretisch}}{\partial T} \, \Delta T \right| =\left| \frac{\kappa \, R}{2M}\, \frac{1}{\sqrt{\kappa \, \frac{RT}{M}}} \, \Delta T \right| 
+\end{align}
+Somit ist $\Delta c_{Schall}^{theoretisch}=0,06\, \frac{m}{s}$ und das Gesamtresultat für den theoretischen Wert lautet:
+\begin{align}
+\boldsymbol{c_{Schall}^{theoretisch} = (343,67 \pm 0,06) \, \frac{m}{s}}
+\end{align}
+\newline
+\newline Um die Schallgeschwindigkeit mit Hilfe des Röhrenresonators zu bestimmen, wurden zwei verschiedene Längen des Röhrenresonators ausgewählt: $L_1=62,5$ cm und $L_{2}=47,5$ cm. Für beide Längen wurden die Frequenzen von $100$ Hz bis $10$ kHz durchlaufen. Dabei ergaben sich Resonanzfrequenzen als Peaks. Es viel bereits auf, dass für größere Längen %vergleich frequenzen für größere Längen, nutze gleichung (1), frequenzen äquidistant und für größere längen kürzere frequenzabstände%.
+Durch Durchnummerierung der ersten 20 Peaks mit $n=1,...,20$ konnte folgender Plot erstellt werden:
+%plot
+Er stellt die Resonanzfrequenz in Abhängigkeit von der Nummer $n$ dar. Daraus kann die Schallgeschwindigkeit aufgrund des Zusammenhangs (\ref{schall}) aus dem Anstieg bestimmt werden:
+\begin{align}
+\label{schall} f = n\, \frac{c_{Schall}}{2L}
+\end{align}
+Als Unsicherheiten wird die durch den Fit ausgegebene Unsicherheit des Anstiegs verwendet. Somit ergeben sich die experimentellen Schallgeschwindigkeiten zu:
+\begin{align}
+exp schall... %fett
+\end{align}
+%vergleich der werte
+%Analogien zur Quantenmechanik
+
+\subsubsection{Theoretisches Modell und Reproduzierbarkeit}
+Um die Reproduzierbarkeit der Messung zu untersuchen wurden mit Hilfe eines Fit-Programms für 8 Peaks in einem Frequenzbereich von $1,6$ kHz bis $4,5$ kHz ein Fit vorgenommen. Dies ist im folgenden Plot dargestellt:
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{fitfunktion}
+\caption{Fit des theoretisches Modells zum experimentellen Spektrum}
+\end{figure}
+Es ist also zu erkennen, dass dass das aufgenommene Frequenzspektrum sehr gut durch die im Fit-Programm verwendeten Gauß-Funktionen dargestellt werden können.
+Somit ist die Reproduzierbarkeit und eine Übereinstimmung mit dem theoretischen Modell gegeben. %ggf weiterer vergleich
+
+\subsection{Kugelresonator}
+\subsubsection{Bestimmung der Resonanzfrequenzen und Winkelabhängigkeit der Wellenfunktion}
+Nach Anpassung der Attentuator-Einstellung zur Signalabschwächung wurde ein Übersichtsspektrum zwischen $100$ Hz und $8$ kHz für einen Winkel $\alpha$ von $180^{\circ}$ aufgenommen. Dieses ist hier abgebildet:
+%plot 180 grad
+%Aussage über plot
+Diese Messung wurde für weitere Winkel von  $0^{\circ}$, $60^{\circ}$, $85^{\circ}$ und $120^{\circ}$ wiederholt. Alle 5 gemessenen Winkel sind in folgendem Plot zur besseren Vergleichbarkeit zusammen dargestellt:
+%plot alle winke zsm
+%vgl spektren und begründung über wellenfkt
+
+\subsubsection{Polardiagramme}
+%hier fehlt noch alles
+
+
 
 
 
