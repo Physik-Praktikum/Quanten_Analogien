@@ -205,9 +205,74 @@ Wobei $u_k(x)$ die Periodizität des betrachteten Gitters besitzt. Dies kann dan
 \end{align}
 Die Wellenfunktion ergibt sich also aus den Beiträgen aller $k$-Punkte in der Brillouin-Zone. $k$-Punkte sind durch reziproke Gittervektoren miteinander verbunden. Es reicht also aus die Dispersionsrelation $E(k)$ in der ersten Brillouin-Zone zu betrachten, dies wird dann als reduziertes Zonenschema bezeichnet.
 
-
 \section{Aufbau und Versuchsprinzip}
+Für den Versuch standen die benötigten Resonatoren zur Verfügung: Kugel-und Röhrenresonatoren aus Aluminium. In diese sind jeweils ein Lautsprecher und ein Mikrophon integriert. Über den PC können der jeweilige Frequenzbereich, die Integrationszeit und die Frequenzschrittweite eingestellt werden. Bei Start der Messung wird über die Soundkarte und einen Controller das Signal an den Lautsprecher übertragen. Das eingehende Signal des Mikrophons wird wieder an den Controller übertragen und entsprechend der Attenuator-Einstellung abgeschwächt, um die Zerstörung der Soundkarte zu verhindern. Das so gemessene Spektrum wird mit Hilfe des Programms SpectrumSLC.exe am PC dargestellt.
 
+
+\section{Durchführung}
+\subsection{Röhrenresonator}
+\subsubsection{Messung der Resonanzfrequenz und Bestimmung der Schallgeschwindigkeit}
+\begin{itemize}
+\item Messung der Raumtemperatur
+\item Aufnahme des Frequenzspektrums von $100$ Hz bis $10$kHz in $10$Hz-Schritten für zwei verschiedene Längen des Röhrenresonators 
+\item Messung der ersten 20 Resonanzfrequenzen
+\end{itemize}
+\subsubsection{Theoretisches Modell und Reproduzierbarkeit}
+\begin{itemize}
+\item Messung der ersten 8 Resonanzpeaks (Schrittweite: $5$ Hz, Integrationszeit: $50$ms) und Fit mit Fit-Funktion des Programms SpectrumSLC.exe
+\end{itemize}
+\subsection{Kugelresonator}
+\subsubsection{Bestimmung der Resonanzfrequenzen und Winkelabhängigkeit der Wellenfunktionen}
+\begin{itemize}
+\item Aufnahme eines Übersichtsspektrums für $\alpha = 180^{\circ}$ von $100$ Hz bis $8$ kHz (Schrittweite: $10$ Hz) nach Anpassung der Signalabschwächung
+\item Wiederholen der Messung für 4 weitere Winkel
+\end{itemize}
+\subsubsection{Polardiagramme}
+\begin{itemize}
+\item Messung eines hochaufgelösten Spektrums (Integrationszeit: $100$ ms) von $2000$ Hz bis $7000$ Hz
+\item Aufnahme der Polardiagramme für jede Peak-Frequenz beginnend mit dem Winkel $\alpha=0^{\circ}$ in $10^{\circ}$-Schritten bis $\alpha=180^{\circ}$
+\item Vergleich der gemessenen Diagramme mit den Kugelflächenfunktionen über das Programm PlotYlm.exe
+\end{itemize}
+\subsection{Symmetriebrechung}
+\begin{itemize}
+\item erneute Messung des Spektrums des Kugelresonators im Frequenzbereich der ersten 3 Peaks
+\item Wiederholen der Messung mit einem $3$mm, $6$mm bzw. $9$mm Abstandshalter-Ring
+\item Aufnahme eines hochaufgelösten Spektrums für die $l=1$ Resonanz für einen $3$mm, $6$mm bzw. $9$mm Abstandshalter-Ring
+\item Zuordnung der magnetischen Quantenzahlen $m$ und Aufnahme der Polardiagramme 
+\item Wiederholen der 2 vorherigen Schritte für $l=2$
+\end{itemize}
+\subsection{Analogie zum Wasserstoffmolekül}
+\begin{itemize}
+\item Messung des Spektrums von $0$ Hz bis $1000$ Hz für einen einzelnen Kugelresonator und zwei gekoppelte Kugelresonatoren für die verschiedenen Irisdurchmesser
+\item Aufnahme des Polardiagramms für einen Irisdurchmesser von $20$ mm
+\item Messung hochaufgelöster Spektren im Bereich um die Resonanz bei $2300$ Hz für 6 verschiedene Winkel 
+\end{itemize}
+\subsection{Analogie zum 1D-Festkörper}
+\subsubsection{Röhrenresonator mit Irisblenden}
+\begin{itemize}
+\item Messung eines Übersichstsspektrums im Bereich von $0$ Hz bis $12$ kHz für die Resonatorlängen $400$ mm und $600$ mm nach Anpassung der Signalabschwächung
+\item Wiederholen der Messung für 11 Irisblenden ($10$ mm, $13$ mm und $16$ mm Innendurchmesser) zwischen den einzelnen Zylindern
+\item Aufnahme eines Spektrums für 8 Zylinder mit Länge $50$ mm ohne und mit Blenden ($16$ mm)
+\item Wiederholen der vorherigen Messung für Zylinder der Länge $75$ mm
+\end{itemize}
+\subsubsection{Atom - Molekül - Kette}
+\begin{itemize}
+\item Messung Übersichtsspektrum im Bereich von $0$ Hz bis $22$ kHz für einen einzelnen Zylinder ($l=50$ mm bzw. $75$ mm)
+\item Aufnahme eines Spektrums für $0$ Hz bis $12$ kHz für 2 getrennte Zylinder der Länge $50$ mm mit Irisblenden ($10$ mm, $13$ mm bzw. $16$ mm)
+\item Wiederholen der Messung für eine steigende Anzahl von Zylindern (Einheitszellen) mit $16$ mm Blenden
+\end{itemize}
+\subsubsection{Überstrukturen und Einheitszellen mit mehr als einem Atom}
+\begin{itemize}
+\item Aufbau eines Festkörpers mit $13$ mm Irisblenden und Messung seines Frequenzspektrums
+\item Wiederholen der Messung unter Ersetzung jeder zweiten Blende durch $16$ mm Blenden
+\item Aufnahme des Spektrums für 5 Einheitszellen bestehend aus jeweils einem $50$ mm Zylinder und einem $75$ mm Zylinder mit einer $16$ mm Blende
+\item Aufbau einer eigenen Überstruktur und Messung des Spektrums 
+\end{itemize}
+\subsubsection{Defekte}
+\begin{itemize}
+\item Aufbau eines Festkörpers aus 12 Zylindern (Länge $50$ mm) mit $16$mm Blenden, Ersetzung einen dieser Zylinder durch einen $75$ mm Zylinder und Messung dieses Spektrums
+\item Einbauen dieses Defekts an einer anderen Stelle und erneute Aufnahme des Spektrums
+\end{itemize}
 
 \section{Auswertung}
 \subsection{Röhrenresonator}
