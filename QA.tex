@@ -44,26 +44,27 @@ separate-uncertainty,  % Unsicherheiten seperat angeben (mit ±)
 \newcommand*{\titel}{Quantenanalogie}
 \newcommand*{\autor}{Tom Drechsler, Konstantin Schmid}
 \newcommand*{\abk}{QA}
-\newcommand*{\betreuer}{<Betreuer>}
+\newcommand*{\betreuer}{Max Mende}
 \newcommand*{\messung}{22.11.2019}
-\newcommand*{\ort}{<Ort>}
+\newcommand*{\ort}{REC/D301}
 
 \hypersetup{pdfauthor={\autor}, pdftitle={\titel}}  % PDF-Metadaten setzen
-
+\begin{document}
 % automatischen Titel konfigurieren
 \titlehead{Fortgeschrittenen-Praktikum \abk \hfill TU Dresden}
 \subject{Versuchsprotokoll}
 \title{\titel}
 \author{\autor}
 \date{\begin{tabular}{ll}
-Protokoll: & \today\\
-Messung: & \messung\\
-Ort: & \ort\\
-Betreuer: & \betreuer\end{tabular}}
+Protokoll: & \today \\
+Messung:  & \messung \\
+Ort: & \ort \\
+Betreuer:  & \betreuer
+\end{tabular}}
 
 % -- Ende Präambel
 
-\begin{document}
+
 \begin{titlepage}
 \maketitle  % Titel setzen
 \tableofcontents  % Inhaltsverzeichnis
@@ -79,7 +80,7 @@ Ziel des Versuchs ist es Quantenphysik einfach zu erklären und anschaulich zu i
 \subsection{Quantenmechanisches Teilchen in einer Box}
 In diesem Teilversuch wird ein Röhrenresonator verwendet. Dies ist ein geschlossener Hohlzylinder der Länge $L$ mit einem Lautsprecher an einem Ende. Bei einige Frequenzen $f$ stellen sich stehende Wellen ein. Dies kann durch folgende Gleichung, die sogenannte Resonanzbedingung, beschrieben werden:
 \begin{align}
-2L = n \, \frac{c}{f} = n\lambda
+\label{1}2L = n \, \frac{c}{f} = n\lambda
 \end{align}
 Hierbei ist $c$ die Schallgeschwindigkeit, $\lambda$ die Wellenlänge und $n  \in N_{>0}$. Dies kann Analog zu den Lösungen für ein quantenmechanisches Teilchen in einem unendlich hohen Potentialtopf betrachtet werden.
 \newline
@@ -206,7 +207,8 @@ Wobei $u_k(x)$ die Periodizität des betrachteten Gitters besitzt. Dies kann dan
 Die Wellenfunktion ergibt sich also aus den Beiträgen aller $k$-Punkte in der Brillouin-Zone. $k$-Punkte sind durch reziproke Gittervektoren miteinander verbunden. Es reicht also aus die Dispersionsrelation $E(k)$ in der ersten Brillouin-Zone zu betrachten, dies wird dann als reduziertes Zonenschema bezeichnet.
 
 \section{Aufbau und Versuchsprinzip}
-Für den Versuch standen die benötigten Resonatoren zur Verfügung: Kugel-und Röhrenresonatoren aus Aluminium. In diese sind jeweils ein Lautsprecher und ein Mikrophon integriert. Über den PC können der jeweilige Frequenzbereich, die Integrationszeit und die Frequenzschrittweite eingestellt werden. Bei Start der Messung wird über die Soundkarte und einen Controller das Signal an den Lautsprecher übertragen. Das eingehende Signal des Mikrophons wird wieder an den Controller übertragen und entsprechend der Attenuator-Einstellung abgeschwächt, um die Zerstörung der Soundkarte zu verhindern. Das so gemessene Spektrum wird mit Hilfe des Programms SpectrumSLC.exe am PC dargestellt.
+Für den Versuch standen die benötigten Resonatoren zur Verfügung: Kugel-und Röhrenresonatoren aus Aluminium. In diese sind jeweils ein Lautsprecher und ein Mikrophon integriert. Über den PC können der jeweilige Frequenzbereich, die Integrationszeit und die Frequenzschrittweite eingestellt werden. Bei Start der Messung wird über die Soundkarte und einen Controller das Signal an den Lautsprecher übertragen. Das eingehende Signal des Mikrophons wird wieder an den Controller übertragen und entsprechend der Attenuator-Einstellung abgeschwächt, um die Zerstörung der Soundkarte zu verhindern. Das so gemessene Spektrum wird mit Hilfe des Programms SpectrumSLC.exe am PC dargestellt. 
+\newline Während des Versuchs und in der Auswertung ist zu beachten, dass der Winkel $\alpha$ gegebenenfalls in den Winkel $\theta$ umgerechnet werden muss. Die Vorschrift dafür lautet: $\theta = \text{arccos}\left(\frac{1}{2}\,\cos(\alpha)-\frac{1}{2}\right)$.
 
 
 \section{Durchführung}
@@ -277,32 +279,32 @@ Für den Versuch standen die benötigten Resonatoren zur Verfügung: Kugel-und R
 \section{Auswertung}
 \subsection{Röhrenresonator}
 \subsubsection{Messung der Resonanzfrequenz und Bestimmung der Schallgeschwindigkeit}
-Während der Durchführung dieses Versuchsteils betrug die Raumtemperatur $T=20,6^{\circ} C$. Dies ermöglicht den theoretischen Wert für die Schallgeschwindigkeit zu berechnen. Dazu wird im Folgenden die Gleichung für die Schallgeschwindigkeit eines idealen Gasas verwendet:
+Während der Durchführung dieses Versuchsteils betrug die Raumtemperatur $T=20,6^{\circ} \mathrm{C}$. Dies ermöglicht den theoretischen Wert für die Schallgeschwindigkeit zu berechnen. Dazu wird im Folgenden die Gleichung für die Schallgeschwindigkeit eines idealen Gasas verwendet:
 \begin{align}
-c_{Schall}^{theoretisch} = \sqrt{\kappa \, \frac{R\, T}{M}}
+c_{\mathrm{Schall}}^{\mathrm{theoretisch}} = \sqrt{\kappa \, \frac{R\, T}{M}}
 \end{align}
-Dabei ist $R$ die universelle Gaskonstante, $\kappa$ der Adiabatenexponent und M die Molare Masse des betrachteten Gases. R hat den Wert $8,314 \frac{kg \, m^2}{s^2 \, mol \, K}$.
-Für $\kappa$ und M werden die Werte für trockene Luft bei $20^{\circ}C$ verwendet. Somit ist $\kappa=1,40$ und $M=28,949 \frac{g}{mol}$. Der daraus resultierende theoretische Wert für die Schallgeschwindigkeit ist:
+Dabei ist $R$ die universelle Gaskonstante, $\kappa$ der Adiabatenexponent und M die Molare Masse des betrachteten Gases. R hat den Wert $8,314 \frac{\mathrm{kg} \cdot \mathrm{m}^2}{\mathrm{s}^2 \cdot \mathrm{mol} \cdot \mathrm{K}}$.
+Für $\kappa$ und M werden die Werte für trockene Luft bei $20^{\circ}\mathrm{C}$ verwendet. Somit ist $\kappa=1,40$ und $M=28,949 \frac{\mathrm{g}}{\mathrm{mol}}$. Der daraus resultierende theoretische Wert für die Schallgeschwindigkeit ist:
 \begin{align}
-c_{Schall}^{theoretisch}=343,67 \, \frac{m}{s}
+c_{\mathrm{Schall}}^{\mathrm{theoretisch}}=343,67 \, \frac{\mathrm{m}}{\mathrm{s}}
 \end{align}
-Da die Temperatur gemessen wurde, ist diese als mit einer Messabweichung behaftet anzunehmen. Die angenommene Messunsicherheit ist $\Delta T=0,1^{\circ}C$. Dies bewirkt eine Unsicherheit $\Delta c_{Schall}^{theoretisch}$:
+Da die Temperatur gemessen wurde, ist diese als mit einer Messabweichung behaftet anzunehmen. Die angenommene Messunsicherheit ist $\Delta T=0,1^{\circ} \mathrm{C}$. Dies bewirkt eine Unsicherheit $\Delta c_{\mathrm{Schall}}^{\mathrm{theoretisch}}$:
 \begin{align}
-\Delta c_{Schall}^{theoretisch} = \left| \frac{\partial c_{Schall}^{theoretisch}}{\partial T} \, \Delta T \right| =\left| \frac{\kappa \, R}{2M}\, \frac{1}{\sqrt{\kappa \, \frac{RT}{M}}} \, \Delta T \right| 
+c_{\mathrm{Schall}}^{\mathrm{theoretisch}} = \left| \frac{\partial c_{\mathrm{Schall}}^{\mathrm{theoretisch}}}{\partial T} \, \Delta T \right| =\left| \frac{\kappa \, R}{2M}\, \frac{1}{\sqrt{\kappa \, \frac{RT}{M}}} \, \Delta T \right| 
 \end{align}
-Somit ist $\Delta c_{Schall}^{theoretisch}=0,06\, \frac{m}{s}$ und das Gesamtresultat für den theoretischen Wert lautet:
+Somit ist $c_{\mathrm{Schall}}^{\mathrm{theoretisch}}=0,06\, \frac{m}{s}$ und das Gesamtresultat für den theoretischen Wert lautet:
 \begin{align}
-\boldsymbol{c_{Schall}^{theoretisch} = (343,67 \pm 0,06) \, \frac{m}{s}}
+\boldsymbol{c_{\mathrm{Schall}}^{\mathrm{theoretisch}} = (343,67 \pm 0,06) \, \frac{\mathrm{m}}{\mathrm{s}}}
 \end{align}
 \newline
-\newline Um die Schallgeschwindigkeit mit Hilfe des Röhrenresonators zu bestimmen, wurden zwei verschiedene Längen des Röhrenresonators ausgewählt: $L_1=62,5$ cm und $L_{2}=47,5$ cm. Beim Durchlaufen der Frequenzen ergaben sich Resonanzfrequenzen als Peaks. Dieses Spektrum ist hier dargestellt:
-
-\begin{figure}[h]
+\newline Um die Schallgeschwindigkeit mit Hilfe des Röhrenresonators zu bestimmen, wurden zwei verschiedene Längen des Röhrenresonators ausgewählt: $L_1=62,5$ cm und $L_{2}=47,5$ cm. Beim Durchlaufen der Frequenzen ergaben sich Resonanzfrequenzen als Peaks. Dieses Spektrum ist hier dargestellt: 
+\begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{4.2.1_Resonanzen} %hat nicht funktioniert
-\caption{Resonanzen}
-\end{figure}
-
+\includegraphics[width=0.9\textwidth]{421_Resonanzen.png} 
+\caption{Frequenzspektrum für $L_1$ und $L_2$}
+\end{figure} 
+\[\]
+\newpage
 Es fällt auf, dass für die größere Länge die Abstände zwischen den Peaks kleiner sind. Dies hängt mit Gleichung (\ref{1}) zusammen. Umgestellt nach den Frequenzabständen $\Delta f$ der Peaks lautet diese nämlich:
 \begin{align}
 \Delta f = \frac{c}{2\,L} 
@@ -310,40 +312,65 @@ Es fällt auf, dass für die größere Länge die Abstände zwischen den Peaks k
 Unter der Annahme, dass die gleiche Schallgeschwindigkeit vorlag ist also $\Delta f$ umso größer, desto kleiner die Länge $L$. Außerdem sind diese immer äquidistant, was auch in obigem Plot zu erkennen ist.
 
 
-Durch Durchnummerierung der ersten 20 Peaks mit $n=1,...,20$ konnte folgender Plot erstellt werden:
-%plot
-Er stellt die Resonanzfrequenz in Abhängigkeit von der Nummer $n$ dar. Daraus kann die Schallgeschwindigkeit aufgrund des Zusammenhangs (\ref{schall}) aus dem Anstieg bestimmt werden:
+Durch Durchnummerierung der ersten 20 Peaks mit $n=1,...,20$ konnten folgende Plots erstellt werden: 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.85\textwidth]{421_systematische_Unsicherheiten.png} %hat nicht funktioniert
+\caption{Ausgleichsgerade mit systematischen Unsicherheiten}
+\includegraphics[width=0.85\textwidth]{421_statistische_Unsicherheiten.png} %hat nicht funktioniert
+\caption{Ausgleichsgerade mit statistischen Unsicherheiten}
+\end{figure} 
+\newpage
+Er stellt die Resonanzfrequenz in Abhängigkeit von der Nummer $n$ mit systematischer bzw. statistischer Unsicherheit dar. Daraus kann die Schallgeschwindigkeit aufgrund des Zusammenhangs (\ref{schall}) aus dem Anstieg bestimmt werden:
 \begin{align}
-\label{schall} f = n\, \frac{c_{Schall}}{2L}
+\label{schall} f = n \cdot\frac{c_{\mathrm{Schall}}}{2L}
 \end{align}
-Als Unsicherheiten wird die durch den Fit ausgegebene Unsicherheit des Anstiegs verwendet. Somit ergeben sich die experimentellen Schallgeschwindigkeiten zu:
+Man erhält also die experimentellen Werte für die Schallgeschwindigkeit aus dem Anstieg, indem man diesen mit $2L$ multipliziert. In diesem Fall ergaben sich die Schallgeschwindigkeiten zu:
 \begin{align}
-exp schall... %fett
+c_{\mathrm{Schall}}^{\mathrm{experimentell}} =
+  \begin{cases}
+    343,4 \pm 2,8_{\mathrm{stat.}} \pm 4,0_{\mathrm{sys.}}  & \text{für} \ L_{1}  \\
+	317,1 \pm 3,7_{\mathrm{stat.}} \pm 5,0_{\mathrm{sys.}} & \text{für} \ L_{2}
+  \end{cases}
 \end{align}
-%vergleich der werte
-%Analogien zur Quantenmechanik
+Schließlich kann man die experimentell ermittelten Werte mit dem aus der Theorie errechneten Wert vergleichen. Der Wert für $L_1$ stimmt sehr gut mit dem Wert aus der Theorie überein. Der Wert für $L_2$ liegt allerdings weit von dem theoretischen Wert entfernt, selbst wenn man von den maximalen Unsicherheiten ausgeht. Dies könnte daran liegen, dass wie bereits diskutiert, für die kürzere Länge die Peaks breiter sind. Dies erschwert es die genaue Lage des Maximums zu bestimmen und bewirkt also eine zusätzliche Abweichung von der tatsächlichen Peak-Frequenz.
+\newline
+\newline Analog zum Teilchen im unendlich hohen Potential Topf kommt es also zur Ausbildung stehender Wellen im Resonator. Allerdings sind die Peaks im Resonator bezüglich der Frequenz äquidistant und die Energien $E(n)$ sind proportional zu $n^2$, also nicht äquidistant.
 
 \subsubsection{Theoretisches Modell und Reproduzierbarkeit}
 Um die Reproduzierbarkeit der Messung zu untersuchen wurden mit Hilfe eines Fit-Programms für 8 Peaks in einem Frequenzbereich von $1,6$ kHz bis $4,5$ kHz ein Fit vorgenommen. Dies ist im folgenden Plot dargestellt:
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{fitfunktion}
+\includegraphics[width=0.7\textwidth]{Messung_L2_und_Fitfunktion.png}
 \caption{Fit des theoretisches Modells zum experimentellen Spektrum}
 \end{figure}
+\newpage
 Es ist also zu erkennen, dass dass das aufgenommene Frequenzspektrum sehr gut durch die im Fit-Programm verwendeten Gauß-Funktionen dargestellt werden können.
-Somit ist die Reproduzierbarkeit und eine Übereinstimmung mit dem theoretischen Modell gegeben. %ggf weiterer vergleich
+Somit ist die Reproduzierbarkeit und eine Übereinstimmung mit dem theoretischen Modell gegeben.
 
 \subsection{Kugelresonator}
 \subsubsection{Bestimmung der Resonanzfrequenzen und Winkelabhängigkeit der Wellenfunktion}
-Nach Anpassung der Attentuator-Einstellung zur Signalabschwächung wurde ein Übersichtsspektrum zwischen $100$ Hz und $8$ kHz für einen Winkel $\alpha$ von $180^{\circ}$ aufgenommen. Dieses ist hier abgebildet:
-%plot 180 grad
-%Aussage über plot
-Diese Messung wurde für weitere Winkel von  $0^{\circ}$, $60^{\circ}$, $85^{\circ}$ und $120^{\circ}$ wiederholt. Alle 5 gemessenen Winkel sind in folgendem Plot zur besseren Vergleichbarkeit zusammen dargestellt:
-%plot alle winke zsm
-%vgl spektren und begründung über wellenfkt
+Nach Anpassung der Attentuator-Einstellung zur Signalabschwächung wurde ein Übersichtsspektrum zwischen $100$ Hz und $8$ kHz für einen Winkel $\alpha$ von $180^{\circ}$ (diese entspricht $\theta = 180^{\circ}$) aufgenommen. Dieses ist hier abgebildet: \\\\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{4311}
+\caption{Übersichtsspektrum für $\alpha = \theta = 180^{\circ}$}
+\end{figure}
+Wieder ergaben sich Resonanzfrequenzen als Peaks. Diese lagen bei:
+
+Diese Messung wurde für weitere Winkel $\alpha$ von  $0^{\circ}$, $60^{\circ}$, $85^{\circ}$ und $120^{\circ}$ wiederholt. Nach der gegebenen Vorschrift in $\theta$ umgerechnet lauten diese: $90^{\circ}$; $104,48^{\circ}$; $117,16^{\circ}$ und $138,59^{\circ}$. Die 4 Spektren sind in folgendem Plot zur besseren Vergleichbarkeit zusammen dargestellt: \\\\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{4312}
+\caption{Frequenzspektren für verschiedene Winkel $\theta$}
+\end{figure}
+
+
+
+
+
 
 \subsubsection{Polardiagramme}
-%hier fehlt noch alles
 
 
 
