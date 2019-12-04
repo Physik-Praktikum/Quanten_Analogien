@@ -356,14 +356,26 @@ Nach Anpassung der Attentuator-Einstellung zur Signalabschwächung wurde ein Üb
 \includegraphics[width=\textwidth]{4311}
 \caption{Übersichtsspektrum für $\alpha = \theta = 180^{\circ}$}
 \end{figure}
-Wieder ergaben sich Resonanzfrequenzen als Peaks. Diese lagen bei:
-
-Diese Messung wurde für weitere Winkel $\alpha$ von  $0^{\circ}$, $60^{\circ}$, $85^{\circ}$ und $120^{\circ}$ wiederholt. Nach der gegebenen Vorschrift in $\theta$ umgerechnet lauten diese: $90^{\circ}$; $104,48^{\circ}$; $117,16^{\circ}$ und $138,59^{\circ}$. Die 4 Spektren sind in folgendem Plot zur besseren Vergleichbarkeit zusammen dargestellt: \\\\
-\begin{figure}[h!]
+Wieder ergaben sich Resonanzfrequenzen als Peaks. Diese lagen bei: $2300$ Hz, $3680$ Hz, $4970$ Hz, $6170$ Hz und $7420$ Hz.
+Diese Messung wurde für weitere Winkel $\alpha$ von  $0^{\circ}$, $60^{\circ}$, $85^{\circ}$ und $120^{\circ}$ wiederholt. Nach der gegebenen Vorschrift in $\theta$ umgerechnet lauten diese: $90^{\circ}$; $104,48^{\circ}$; $117,16^{\circ}$ und $138,59^{\circ}$. Die 4 Spektren sind in folgendem Plot zur besseren Vergleichbarkeit zusammen dargestellt:
+\begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{4312}
+\includegraphics[width=\textwidth]{4312.png}
 \caption{Frequenzspektren für verschiedene Winkel $\theta$}
 \end{figure}
+Die Peaks aller 5 Winkel sind mit ihren Amplituden in folgender Tabelle dargestellt:
+%tabelle 
+
+
+Im Folgenden betrachten wir exemplarisch den zweiten Peak. Dieser entspricht $l=2$. Zudem haben wir ohne Symmetriebrechung immer den Fall $m=0$ vorliegen. An den Werten der Intensitäten ist zu erkennen, dass diese für $\theta = 90^{\circ}$ circa halb so groß ist wie für $\theta=180^{\circ}$. Außerdem sehen wir an den Diagrammen, dass zwischen $\theta=117,16^{\circ}$ und $\theta=138,59^{\circ}$ ein Minimum der Intensität erreicht werden muss. Dies hängt mit den Legendre-Polynomen zusammen. Für den zweiten Peak gilt es $P^{0}_{2}(\cos(\theta))=\frac{1}{2}\,(3\,\cos^2(\theta)-1)$ zu betrachten. Dieses ist grafisch als grüner Graph in der folgenden Abbildung mit den ersten 5 Legendre-Polynomen dargestellt:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{Legendre_Polynome.png}
+\caption{Die ersten 5 Legendre-Polynome}
+\end{figure}
+Es ist also am Verlauf des Polynoms zu sehen, dass es bei $\cos(\theta)=1$ (entspricht $\theta = 180^{\circ}$) sein Maximum bei $1$ hat. Für $\cos(\theta)=0$ (entspricht $\theta = 90^{\circ}$) hat es ein Minimum mit Funktionswert $-0,5$. Dies korrespondiert mit der Beobachtung, dass die Intensität für $\theta = 90^{\circ}$ nur halb so hoch ist wie für $\theta = 180^{\circ}$. Das Legendre-Polynom hat für $\theta = 125,26^{\circ}$ einen Knoten. Dies ist in Einklang damit, dass die Intensität zwischen $\theta=117,16^{\circ}$ und $\theta=138,59^{\circ}$ ein Minimum hat.
+\newline Letztendlich kann man folgern, dass die experimentellen Beobachtungen unter Berücksichtigung der hohen Sensibilität des Versuchsaufbaus gut mit der Theorie übereinstimmen.
+
 
 
 
