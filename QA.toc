@@ -26,4 +26,12 @@
 \contentsline {subsubsection}{\numberline {5.1.2}Theoretisches Modell und Reproduzierbarkeit}{13}{subsubsection.5.1.2}
 \contentsline {subsection}{\numberline {5.2}Kugelresonator}{14}{subsection.5.2}
 \contentsline {subsubsection}{\numberline {5.2.1}Bestimmung der Resonanzfrequenzen und Winkelabh\IeC {\"a}ngigkeit der Wellenfunktion}{14}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Polardiagramme}{16}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2}Polardiagramme}{17}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}Symmetriebrechung}{19}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Analogie zum Wasserstoffmolek\IeC {\"u}l}{23}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Analogie zum 1D-Festk\IeC {\"o}rper}{27}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}R\IeC {\"o}hrenresonator mit Irisblenden}{27}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}Atom-Molek\IeC {\"u}l-Kette}{33}{subsubsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.3}\IeC {\"U}berstrukturen und Einheitszellen mit mehr als einem Atom}{36}{subsubsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.4}Defekte}{40}{subsubsection.5.5.4}
+\contentsline {section}{\numberline {6}Fazit}{42}{section.6}
