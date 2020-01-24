@@ -29,6 +29,10 @@ separate-uncertainty,  % Unsicherheiten seperat angeben (mit ±)
 \usepackage{enumitem}  % Listen anpassen
 \setlist{itemsep=-10pt}  % Abstände zwischen Listenpunkten verringern
 
+\addto{\captionsngerman}{
+\renewcommand*{\figurename}{Abb.}
+}
+
 % Manipulation des Seitenstils
 \usepackage{scrpage2}
 % Kopf-/Fußzeilen setzen
@@ -407,8 +411,8 @@ Nun kann jeder Resonanzpeak einzeln angewählt werden und so für die jeweilige 
 \captionof{figure}{Polardiagramm zu Peak 5}
 \end{minipage}
 \\\\
-Ein Vergleich mit den Kugelflächenfunktionen des Programms PlotYlm.exe liefert dann die bereits im Diagramm angegebene Zuordnung der l-Quantenzahlen.
-\newline Als Fazit kann man also sagen, dass die gemessenen Polardiagramme den theoretischen Fakt untermauern, dass die winkelabhängigen Gleichungen für das Wasserstoffatom und den Kugelresonator die gleiche Lösung haben, die Kugelflächenfunktionen. Außerdem steigt mit der Frequenz auch die l-Quantenzahl. Beim Wasserstoffatom muss zuerst die Hauptquantenzahl $n$ erhöht werden, um bestimmte l-Zustände erreichen zu können, da $l$ von $0$ bis $n-1$ läuft. Analog dazu steigt mit der Frequenz die l-Quantenzahl in diesem Versuch. Jedoch ist dies eher eine qualitative als eine quantitative Gemeinsamkeit.
+Ein Vergleich mit den Kugelflächenfunktionen des Programms PlotYlm.exe liefert dann die bereits im Diagramm angegebene Zuordnung der \(l\)-Quantenzahlen. Aufgrund der hohen Ähnlichkeit der Kugelflächenfunktionen beim ersten und fünften Peak ist es naheliegend, dass beide dieselbe \(l\)-Quantenzahl haben und sich nur in der radialen Quantenzahl unterscheiden. Da beide den Wert \(l=1\) haben und die Drehimpulsquantenzahl immer im Bereich \(l = 0,1,2,\hdots, n-1\) liegt, müssen beide Peaks eine Hauptquantenzahl von \(n\geq 2\) haben. Die radiale Quantenzahl ist definiert als \(n_{\mathrm{r}} = n-l-1\) und da \(l=1\) sowie \(n\geq 2\) gilt, folgt für beide Peaks \( n_{\mathrm{r}} = 0,1,2, \hdots\). Da der fünfte Peak energetisch höher angeregt ist, hat er eine höhere \(n\)-Quantenzahl als der erste Peak. Es wäre denkbar, dass der erste Peak \(n_{\mathrm{r}}=0\) also \(n=2\) und der fünfte Peak \(n_{\mathrm{r}}=1\) also \(n=3\) hat.
+\newline Als Fazit kann man also sagen, dass die gemessenen Polardiagramme den theoretischen Fakt untermauern, dass die winkelabhängigen Gleichungen für das Wasserstoffatom und den Kugelresonator die gleiche Lösung haben, die Kugelflächenfunktionen. Außerdem steigt mit der Frequenz auch die \(l\)-Quantenzahl. Beim Wasserstoffatom muss zuerst die Hauptquantenzahl $n$ erhöht werden, um bestimmte \(l\)-Zustände erreichen zu können, da $l$ von $0$ bis $n-1$ läuft. Analog dazu steigt mit der Frequenz die \(l\)-Quantenzahl in diesem Versuch. Jedoch ist dies eher eine qualitative als eine quantitative Gemeinsamkeit.
 
 \subsection{Symmetriebrechung}
 Für diesen Teilversuch wurde zuerst das Spektrum der ersten drei Peaks für den Kugelresonator gemessen. Der dazu ausgewählte Frequenzbereich war $2,0$ kHz bis $5,6$ kHz in Frequenzschritten von $5$ Hz bei $\alpha = 180^{\circ}$. Dieses Spektrum sieht wie folgt aus:
@@ -438,11 +442,14 @@ Um diese Aufspaltung nun exemplarisch genauer zu untersuchen wurden die Peaks mi
 Hier sieht man die zunehmende Aufspaltung bei zunehmendem $d$ noch einmal etwas deutlicher.
 \newline Die bei den Peakfrequenzen aufgenommen Polardiagramme bei $d=9$mm sind dann diese:
 \\\\
-\begin{minipage}{0.48 \textwidth} \centering
+\begin{minipage}{0.4 \textwidth} \centering
 \includegraphics[scale=0.3]{445_l1_linker_Peak.jpg}
 \captionof{figure}{Polardiagramm linker Peak für $l=1$}
 \end{minipage}
-\begin{minipage}{0.48 \textwidth} \centering
+\begin{minipage}{0.2\textwidth}\centering
+\
+\end{minipage}
+\begin{minipage}{0.4 \textwidth} \centering
 \includegraphics[scale=0.3]{445_l1_rechter_Peak.jpg}
 \captionof{figure}{Polardiagramm rechter Peak für $l=1$}
 \end{minipage}
@@ -450,16 +457,19 @@ Hier sieht man die zunehmende Aufspaltung bei zunehmendem $d$ noch einmal etwas 
 Ein Vergleich mit den Funktionen aus PlotYlm.exe liefert dann, dass dem Bild zum linken Peak ein $m$ von 0 und dem rechten Peak ein $|m|$ von 1 zugeordnet werden kann. 
 \newline Selbiges Vorgehen wurde nun für $l=2$ wiederholt. Diese Polardiagramme sehen so aus:
 \\\\
-\begin{minipage}{0.48 \textwidth} \centering
+\begin{minipage}{0.4 \textwidth} \centering
 \includegraphics[scale=0.3]{445_l2_linker_Peak.jpg}
 \captionof{figure}{Polardiagramm linker Peak für $l=2$}
 \end{minipage}
-\begin{minipage}{0.48 \textwidth} \centering
+\begin{minipage}{0.2\textwidth}\centering
+\
+\end{minipage}
+\begin{minipage}{0.4 \textwidth} \centering
 \includegraphics[scale=0.3]{445_l2_mittlerer_Peak.jpg}
 \captionof{figure}{Polardiagramm mittlerer Peak für $l=2$}
 \end{minipage}
 \\\\
-\begin{minipage}{0.48 \textwidth} \centering
+\begin{minipage}{0.4 \textwidth} \centering
 \includegraphics[scale=0.3]{445_l2_rechter_Peak.jpg}
 \captionof{figure}{Polardiagramm rechter Peak für $l=2$}
 \end{minipage}
@@ -669,10 +679,15 @@ Um die einzelnen Atome für beide Zylinderlängen miteinander und mit Überstruk
 \end{figure}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{4632_Vergleich_mit_Atomketten.png}
+\includegraphics[width=\textwidth]{4632_Vergleich_mit_Atomketten_ohne_Blenden.png}
 \caption{Vergleich des Zonenschemas der Atomketten mit der Überstruktur}
 \end{figure}
-\\\\
+\newpage
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{4632_Vergleich_mit_Atomketten_mit_Blenden.png}
+\caption{Vergleich des Zonenschemas der Atomketten mit der Überstruktur}
+\end{figure}
 Bei Betrachtung und Vergleich der Grafiken könnte man annehmen, dass die Zustände für die einzelnen Atome bei Zusammenfügen derer zu einer Überstruktur miteinander gemischt werden. Aus dieser Mischung der Zustände entsteht dann die Grafik der Überstruktur.
 \\\\
 Als eigene Kombination für eine Überstruktur wurde ein Festkörper aufgebaut mit 2 $75$ mm Zylindern und einem $50$ mm Zylinder, die jeweils durch eine $16$ mm Blende getrennt sind. Dies ergab folgendes reduziertes Zonenschema:
@@ -684,7 +699,6 @@ Als eigene Kombination für eine Überstruktur wurde ein Festkörper aufgebaut m
 \end{figure}
 \\\\
 Die Brioullin-Zone wird nochmals ersichtlich kleiner, weil die Periodizität länger geworden ist. Außerdem verschieben sich die Zustände neu, sodass man sehr viele Zustände niedriger Energie und auffallend große Bandlücken in den höheren Niveaus hat. 
-
 \subsubsection{Defekte}
 Um eine Störung zu simulieren, wird ein Festkörper aus 12 $50$ mm Zylindern mit $16$ mm Blenden aufgebaut und dann ein Zylinder durch einen $75$ mm Zylinder ersetzt. Der Defekt wurde einmal an 6. und einmal an 9. Stelle eingebaut. Die Spektren sahen dann so aus:
 \\\\
@@ -695,7 +709,7 @@ Um eine Störung zu simulieren, wird ein Festkörper aus 12 $50$ mm Zylindern mi
 \end{figure}
 \\\\
 Die zugehörigen reduzierten Zonenschemata sind diese:
-\\\\
+\newpage
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth]{4641_und_4642_reduziertes_Zonenschema.png}
